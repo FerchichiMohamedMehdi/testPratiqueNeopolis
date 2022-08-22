@@ -1,0 +1,96 @@
+package com.example.gestionnaireEvenement.Model;
+
+
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name ="Evenement")
+public class Evenement implements Serializable {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long idEvenement;
+	private String titre;
+	private TypeEvent type;
+	private float date;
+	private float heure;
+	private String description;
+	private String photos;
+	private String adresse;
+	
+	public Evenement(String titre, TypeEvent type, float date, float heure, String description, String photos, String adresse) {
+		super();
+		this.titre = titre;
+		this.type = type;
+		this.date = date;
+		this.heure = heure;
+		this.description = description;
+		this.photos = photos;
+		this.adresse = adresse;
+	}
+	public Evenement() {
+		super();
+	}
+	public Long getIdEvent() {
+		return idEvenement;
+	}
+	public void setIdEvent(Long idEvent) {
+		this.idEvenement = idEvent;
+	}
+	public String getTitre() {
+		return titre;
+	}
+	public void setTitre(String titre) {
+		this.titre = titre;
+	}
+	public TypeEvent getType() {
+		return type;
+	}
+	public void setType(TypeEvent type) {
+		this.type = type;
+	}
+	public float getDate() {
+		return date;
+	}
+	public void setDate(float date) {
+		this.date = date;
+	}
+	public float getHeure() {
+		return heure;
+	}
+	public void setHeure(float heure) {
+		this.heure = heure;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	public String getPhotos() {
+		return photos;
+	}
+	public void setPhotos(String photos) {
+		this.photos = photos;
+	}
+	public String getAdresse() {
+		return adresse;
+	}
+	public void setAdresse(String adresse) {
+		this.adresse = adresse;
+	}
+	@Override
+	public String toString() {
+		return "Evenement [titre=" + titre + ", type=" + type + ", date=" + date + ", heure=" + heure + ", description="
+				+ description + ", photos=" + photos + ", adresse=" + adresse + "]";
+	}
+	
+	
+	
+	
+}

@@ -1,0 +1,6 @@
+package com.example.GestionnaireEvenement.Model;
+
+public enum TypeEvent {
+	Sportif,culturel;
+
+}

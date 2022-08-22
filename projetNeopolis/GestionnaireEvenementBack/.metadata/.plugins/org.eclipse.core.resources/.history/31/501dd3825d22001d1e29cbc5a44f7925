@@ -1,0 +1,13 @@
+package com.example.gestionnaireEvenement.Model;
+
+import java.io.Serializable;
+
+public class User implements Serializable{
+	
+	private Long id;
+	private String userName;
+	private String Password;
+	private String firsName;
+	private String lastName;
+
+}

@@ -1,0 +1,68 @@
+package com.example.gestionnaireEvenement.Service;
+
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.gestionnaireEvenement.Exception.NullException;
+import com.example.gestionnaireEvenement.Exception.ResourceNotFoundException;
+import com.example.gestionnaireEvenement.Model.Evenement;
+import com.example.gestionnaireEvenement.Repository.EvenementRepository;
+
+
+@Service
+public class EvenementService {
+	
+	@Autowired EvenementRepository eventRepo;
+
+	 //Lister tous les évènements
+	 public List<Evenement> listerEvenement(){
+		return eventRepo.findAll();
+	 }
+	 //get By Id event
+	 public Evenement getById(Long id) {
+		 Evenement evenement = eventRepo.findByIdEvenement(id);
+		  return evenement;
+	 }
+	 //créer evenement
+	 public Evenement CreateEvent(Evenement e) {
+		return eventRepo.save(e);
+	 }
+
+	 //Supprimer evenement
+	public void supprimerEvenement(Long id) {
+		try {
+			Evenement evenement = eventRepo.findByIdEvenement(id);
+			try {
+				eventRepo.delete(evenement);
+				}
+			catch(Exception e) {
+				throw new ResourceNotFoundException("Erreur lors de la suppression");
+				}
+			}catch(Exception e) {
+				throw new NullException("id not found");
+				}
+		}
+	 //Mettre à jour evenement
+	public void UpdateEvenement(Evenement e ,Long id) {
+		Evenement evenement = eventRepo.findByIdEvenement(id);
+		
+		if(evenement != null) {
+			eventRepo.save(e);
+		}else {
+			throw new NullException("evenement not found");
+		}
+		
+	}
+	
+
+	
+	
+
+
+	
+	
+
+}

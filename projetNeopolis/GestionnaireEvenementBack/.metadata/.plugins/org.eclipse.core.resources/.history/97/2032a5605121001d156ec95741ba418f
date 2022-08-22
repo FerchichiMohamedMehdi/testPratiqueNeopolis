@@ -1,0 +1,13 @@
+package Repository;
+
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import Model.Evenement;
+
+
+public interface EvenementRepository extends JpaRepository<Evenement, Long>{
+	
+	Evenement findByIdEvenement(Long id);
+
+}

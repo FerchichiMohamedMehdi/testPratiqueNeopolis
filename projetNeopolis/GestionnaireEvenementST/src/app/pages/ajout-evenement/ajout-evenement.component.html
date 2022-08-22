@@ -1,0 +1,43 @@
+
+<h2 mat-dialog-title>Ajout Evenement</h2>
+<mat-dialog-content>
+    <form [formGroup]="form" #localForm="ngForm" (ngSubmit)="onSubmit()">
+        <div class="form-group" id="titre">
+            <label for="titre" id="titre"><b>titre evenement</b></label>
+            <input type="text" class="form-control" matInput  id="titre" 
+            (change)="valuechange($event)" [ngModel]="titre" formControlName="titre" [value]="titre">
+        </div>
+        <div class="form-group" id="type">
+            <label for="type" id="type"><b>type evenement</b></label>
+            <input type="text" class="form-control" matInput  id="type" 
+            (change)="valuechange($event)" [ngModel]="type" formControlName="type" [value]="type">
+        </div>
+        <div class="form-group" id="date">
+            <label for="titre" id="date"><b>date evenement</b></label>
+            <input type="date" class="form-control" matInput  id="date" 
+            (change)="valuechange($event)" [ngModel]="date" formControlName="date" [value]="date">
+        </div>
+        <div class="form-group" id="heure">
+            <label for="heure" id="heure"><b>heure evenement</b></label>
+            <input type="time" class="form-control" matInput  id="heure" 
+            (change)="valuechange($event)" [ngModel]="heure" formControlName="heure" [value]="heure">
+        </div>
+        <div class="form-group" id="description">
+            <label for="description" id="description"><b>description evenement</b></label>
+            <input type="text" class="form-control" matInput  id="description" 
+            (change)="valuechange($event)" [ngModel]="description" formControlName="desription" [value]="description">
+        </div>
+        <div class="form-group" id="photos">
+            <label for="photos" id="photos"><b>photo evenement</b></label>
+            <input type="text" class="form-control" matInput  id="photos" 
+            (change)="valuechange($event)" [ngModel]="photos" formControlName="photos" [value]="photos">
+        </div>
+        <div class="form-group" id="adresse">
+            <label for="adresse" id="adresse"><b>adresse evenement</b></label>
+            <input type="text" class="form-control" matInput  id="adresse" 
+            (change)="valuechange($event)" [ngModel]="adresse" formControlName="adresse" [value]="adresse">
+        </div>
+    </form>
+</mat-dialog-content>
+<button class="btn btn-success" (click)="onSubmit()">Ajouter</button>
+<button mat-button mat-dialog-close (click)="close()">Annuler</button>

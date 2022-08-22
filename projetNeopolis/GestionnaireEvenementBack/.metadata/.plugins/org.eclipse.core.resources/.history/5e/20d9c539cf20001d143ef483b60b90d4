@@ -1,0 +1,10 @@
+package com.example.GestionnaireEvenement.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.example.GestionnaireEvenement.Model.Evenement;
+
+public interface EvenementRepository extends JpaRepository<Evenement, Long>{
+	
+	Evenement findByIdEvenement(Long id);
+
+}

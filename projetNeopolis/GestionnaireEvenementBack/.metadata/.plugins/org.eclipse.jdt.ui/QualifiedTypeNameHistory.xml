@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="Exception.ResourceNotFoundException"/>
+    <fullyQualifiedTypeName name="com.example.gestionnaireEvenement.Service.EvenementService"/>
+    <fullyQualifiedTypeName name="com.example.gestionnaireEvenement.Model.Evenement"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.CrossOrigin"/>
+</qualifiedTypeNameHistroy>

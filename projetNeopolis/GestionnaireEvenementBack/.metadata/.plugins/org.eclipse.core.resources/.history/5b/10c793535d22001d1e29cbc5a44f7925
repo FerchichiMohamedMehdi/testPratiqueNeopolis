@@ -1,0 +1,5 @@
+package com.example.gestionnaireEvenement.Model;
+
+public class User {
+
+}

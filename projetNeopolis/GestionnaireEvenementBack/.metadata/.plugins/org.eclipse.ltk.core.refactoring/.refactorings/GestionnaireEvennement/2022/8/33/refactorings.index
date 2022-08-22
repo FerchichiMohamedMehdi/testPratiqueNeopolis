@@ -1,0 +1,7 @@
+1661086014855	Delete element
+1661086882796	Rename package 'Exception'
+1661086891817	Rename package 'Model'
+1661086899772	Rename package 'Repository'
+1661086942111	Rename package 'Service'
+1661108060065	Encapsulate field 'lat'
+1661108064647	Encapsulate field 'lng'
